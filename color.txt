@@ -1,0 +1,10 @@
+$white: #eeeeee;
+$grey1: #babbb7;
+$grey2: #b6b6b6;
+$grey3: #a9a69e;
+$grey4: #757575;
+$grey5: #595956;
+$black1: #21201e;
+$black2: #000000;
+$brown1: #a67245;
+$brown2: #352c24;
