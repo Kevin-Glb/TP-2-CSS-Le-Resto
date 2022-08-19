@@ -1,0 +1,36 @@
+main {
+	.store {
+		@media screen and (min-width: 900px) {
+			display: grid;
+			grid-template-columns: 50% 50%;
+		}
+
+		div {
+			display: flex;
+			padding: 20px;
+			background: $white1;
+
+			.store-content {
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				border: 1px dashed $brown1;
+
+				h1 {
+					font-size: 3rem;
+				}
+				h2 {
+					font-size: 3rem;
+				}
+			}
+		}
+
+		.store-img {
+			padding: 0;
+			@media screen and (min-width: 900px) {
+				background: url(./../img/store-01.jpg) center/cover;
+				min-height: 60vh;
+			}
+		}
+	}
+}

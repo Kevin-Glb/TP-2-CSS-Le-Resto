@@ -1,0 +1,110 @@
+header {
+	background: url(./../img/bg-slider-06.jpg) center/cover;
+	height: 100vh;
+	position: relative;
+
+	nav {
+		display: flex;
+		align-items: center;
+		height: 10vh;
+		width: 75%;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+
+		li {
+			font-family: $font3;
+			color: $white1;
+			cursor: pointer;
+		}
+		ul {
+			display: flex;
+		}
+		.nav-resto {
+			display: flex;
+			justify-content: center;
+			width: 50%;
+
+			@media screen and (min-width: 900px) {
+				width: 15%;
+			}
+
+			h1 {
+				font-size: 4.5rem;
+				color: $white1;
+			}
+		}
+		.nav-menu {
+			display: none;
+
+			@media screen and (min-width: 900px) {
+				display: flex;
+				justify-content: space-around;
+				width: 75%;
+				font-size: 1.4rem;
+			}
+		}
+
+		li {
+			transition: 0.5s;
+			&:hover {
+				color: $brown1;
+			}
+		}
+	}
+	.nav-social {
+		justify-content: space-evenly;
+		font-size: 1.5rem;
+		width: 50%;
+
+		@media screen and (min-width: 900px) {
+			width: 10%;
+		}
+
+		li {
+			transition: 0.3s;
+			&:hover {
+				transform: scale(1.4);
+			}
+		}
+	}
+}
+
+.header-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 85vh;
+
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 100;
+
+		@media screen and (min-width: 900px) {
+			margin: 0 0 -40px;
+			font-size: 5.5rem;
+		}
+	}
+	h2 {
+		font-size: 4rem;
+		letter-spacing: 7px;
+		color: $white1;
+
+		@media screen and (min-width: 900px) {
+			font-size: 7rem;
+			letter-spacing: 7px;
+		}
+	}
+	img {
+		margin: 10px auto 50px;
+	}
+	p {
+		text-align: center;
+		width: 75vw;
+		font-size: 1.5rem;
+		letter-spacing: 7px;
+		color: $white1;
+	}
+}
