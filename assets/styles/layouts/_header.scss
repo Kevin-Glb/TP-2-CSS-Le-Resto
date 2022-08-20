@@ -7,19 +7,24 @@ header {
 		display: flex;
 		align-items: center;
 		height: 10vh;
-		width: 75%;
+		width: 90%;
 		position: absolute;
+		z-index: 10;
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
 
-		li {
-			font-family: $font3;
-			color: $white1;
-			cursor: pointer;
+		@media screen and (min-width: 900px) {
+			width: 75%;
 		}
+
 		ul {
 			display: flex;
+			li {
+				font-family: $font3;
+				color: $white1;
+				cursor: pointer;
+			}
 		}
 		.nav-resto {
 			display: flex;
@@ -44,12 +49,12 @@ header {
 				width: 75%;
 				font-size: 1.4rem;
 			}
-		}
 
-		li {
-			transition: 0.5s;
-			&:hover {
-				color: $brown1;
+			li {
+				transition: 0.5s;
+				&:hover {
+					color: $brown1;
+				}
 			}
 		}
 	}
@@ -77,10 +82,19 @@ header {
 	align-items: center;
 	flex-direction: column;
 	min-height: 85vh;
+	opacity: 0;
+	transform: translateY(40px);
+	animation: headerAnim 1.5s forwards;
+
+	@keyframes headerAnim {
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
 
 	h1 {
 		font-size: 3.5rem;
-		font-weight: 100;
 
 		@media screen and (min-width: 900px) {
 			margin: 0 0 -40px;

@@ -1,36 +1,226 @@
 main {
+	// ******************** STORE ********************
+
 	.store {
+		display: grid;
 		@media screen and (min-width: 900px) {
-			display: grid;
 			grid-template-columns: 50% 50%;
 		}
 
-		div {
+		.store-left {
 			display: flex;
+			min-height: 75vh;
 			padding: 20px;
 			background: $white1;
 
-			.store-content {
+			@media screen and (min-width: 600px) {
+				min-height: 60vh;
+			}
+
+			.store-border {
+				display: flex;
 				align-items: center;
-				justify-content: center;
-				flex-direction: column;
 				border: 1px dashed $brown1;
 
-				h1 {
-					font-size: 3rem;
-				}
-				h2 {
-					font-size: 3rem;
+				.store-content {
+					text-align: center;
+
+					h1 {
+						font-size: 4rem;
+						margin: 0 0 -20px;
+					}
+					h2 {
+						font-size: 3rem;
+						font-weight: 700;
+					}
+					.logo-store {
+						height: 40px;
+						margin: 40px 0;
+
+						@media screen and (min-width: 600px) {
+							margin: 20px 0;
+						}
+					}
+					p {
+						width: 85%;
+						margin: 20px auto;
+						font-size: 2rem;
+					}
+					.photo-chef1 {
+						height: 100px;
+						margin: 10px 0 20px;
+					}
+					#nom-chef {
+						font-family: $font2;
+						margin: 0 auto;
+					}
+					#chef {
+						font-family: $font2;
+						font-size: 1.5rem;
+						color: $grey1;
+						margin: 0 auto;
+					}
 				}
 			}
 		}
 
 		.store-img {
-			padding: 0;
 			@media screen and (min-width: 900px) {
 				background: url(./../img/store-01.jpg) center/cover;
-				min-height: 60vh;
 			}
 		}
 	}
+
+	// ******************** MENU ********************
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: $black1;
+		color: $white1;
+		padding: 50px 0 0;
+		position: relative;
+
+		h1 {
+			font-size: 4rem;
+		}
+		.menu-logo {
+			height: 40px;
+			margin: 35px 0;
+		}
+		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			width: 85vw;
+
+			@media screen and (min-width: 600px) {
+				width: 60vw;
+			}
+			@media screen and (min-width: 900px) {
+				width: 60vw;
+				width: 820px;
+			}
+			@media screen and (min-width: 1200px) {
+				width: 50vw;
+			}
+
+			li {
+				font-family: $font3;
+				font-size: 1.5rem;
+				margin: 15px 0 30px;
+				padding: 0 0 5px;
+				border-bottom: 1px solid $white1;
+			}
+		}
+
+		.menu-carte {
+			display: grid;
+			grid-template-columns: 1fr;
+			width: 85vw;
+			padding: 20px;
+			background: $white1;
+			color: $black2;
+			border-top: 5px solid $brown1;
+			z-index: 10;
+
+			@media screen and (min-width: 500px) {
+				width: 75vw;
+			}
+			@media screen and (min-width: 700px) {
+				width: 65vw;
+			}
+			@media screen and (min-width: 900px) {
+				grid-template-columns: 1fr 1fr;
+				column-gap: 20px;
+				min-width: 820px;
+				width: 60vw;
+			}
+			@media screen and (min-width: 1200px) {
+				width: 50vw;
+			}
+
+			div {
+				display: grid;
+				grid-template-columns: 30% 60% 10%;
+				align-items: center;
+				height: 15vh;
+				padding: 20px 0;
+				border-bottom: 1px dashed $grey3;
+
+				@media screen and (min-width: 1200px) {
+					height: 20vh;
+				}
+
+				img {
+					height: 70px;
+
+					@media screen and (min-width: 500px) {
+						height: 90px;
+					}
+					@media screen and (min-width: 1200px) {
+						height: 100px;
+					}
+				}
+				p {
+					font-size: 1.4rem;
+					line-height: 22px;
+					color: $grey5;
+					@media screen and (min-width: 900px) {
+						font-size: 1.5rem;
+					}
+				}
+				h3 {
+					font-size: 2rem;
+					@media screen and (min-width: 900px) {
+						font-size: 2.2rem;
+					}
+				}
+			}
+		}
+
+		.bg-menu {
+			position: absolute;
+			z-index: 5;
+			background: url(./../img/bg-menu-01.jpg) center/cover;
+			height: 80vh;
+			width: 100%;
+			bottom: -145px;
+		}
+	}
+
+	// ******************** RESERVATION ********************
+
+	.reservation {
+		display: grid;
+		justify-content: center;
+		margin: 145px 0 0;
+		padding: 100px 0;
+		background-color: $black1;
+		color: $white1;
+
+		.time-border {
+			width: 85vw;
+			padding: 20px;
+			background: $black2;
+
+			.time-open {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				background: $black2;
+				border: 1px dashed $white1;
+			}
+		}
+
+		.online-booking {
+			width: 85vw;
+			background: $white1;
+			color: $black2;
+		}
+	}
+	// ******************** EVENT ********************
+
+	// ******************** CITATION ********************
 }

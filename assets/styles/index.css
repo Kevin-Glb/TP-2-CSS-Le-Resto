@@ -27,6 +27,7 @@ li {
 h1 {
   font-family: allura, cursive;
   color: #a67245;
+  font-weight: 100;
 }
 
 h2 {
@@ -66,19 +67,25 @@ header nav {
   display: flex;
   align-items: center;
   height: 10vh;
-  width: 75%;
+  width: 90%;
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
-header nav li {
-  font-family: roboto, sans-serif;
-  color: #eeeeee;
-  cursor: pointer;
+@media screen and (min-width: 900px) {
+  header nav {
+    width: 75%;
+  }
 }
 header nav ul {
   display: flex;
+}
+header nav ul li {
+  font-family: roboto, sans-serif;
+  color: #eeeeee;
+  cursor: pointer;
 }
 header nav .nav-resto {
   display: flex;
@@ -105,10 +112,10 @@ header nav .nav-menu {
     font-size: 1.4rem;
   }
 }
-header nav li {
+header nav .nav-menu li {
   transition: 0.5s;
 }
-header nav li:hover {
+header nav .nav-menu li:hover {
   color: #a67245;
 }
 header .nav-social {
@@ -134,10 +141,25 @@ header .nav-social li:hover {
   align-items: center;
   flex-direction: column;
   min-height: 85vh;
+  opacity: 0;
+  transform: translateY(40px);
+  -webkit-animation: headerAnim 1.5s forwards;
+          animation: headerAnim 1.5s forwards;
+}
+@-webkit-keyframes headerAnim {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes headerAnim {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .header-content h1 {
   font-size: 3.5rem;
-  font-weight: 100;
 }
 @media screen and (min-width: 900px) {
   .header-content h1 {
@@ -167,35 +189,227 @@ header .nav-social li:hover {
   color: #eeeeee;
 }
 
+main .store {
+  display: grid;
+}
 @media screen and (min-width: 900px) {
   main .store {
-    display: grid;
     grid-template-columns: 50% 50%;
   }
 }
-main .store div {
+main .store .store-left {
   display: flex;
+  min-height: 75vh;
   padding: 20px;
   background: #eeeeee;
 }
-main .store div .store-content {
+@media screen and (min-width: 600px) {
+  main .store .store-left {
+    min-height: 60vh;
+  }
+}
+main .store .store-left .store-border {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
   border: 1px dashed #a67245;
 }
-main .store div .store-content h1 {
-  font-size: 3rem;
+main .store .store-left .store-border .store-content {
+  text-align: center;
 }
-main .store div .store-content h2 {
-  font-size: 3rem;
+main .store .store-left .store-border .store-content h1 {
+  font-size: 4rem;
+  margin: 0 0 -20px;
 }
-main .store .store-img {
-  padding: 0;
+main .store .store-left .store-border .store-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+main .store .store-left .store-border .store-content .logo-store {
+  height: 40px;
+  margin: 40px 0;
+}
+@media screen and (min-width: 600px) {
+  main .store .store-left .store-border .store-content .logo-store {
+    margin: 20px 0;
+  }
+}
+main .store .store-left .store-border .store-content p {
+  width: 85%;
+  margin: 20px auto;
+  font-size: 2rem;
+}
+main .store .store-left .store-border .store-content .photo-chef1 {
+  height: 100px;
+  margin: 10px 0 20px;
+}
+main .store .store-left .store-border .store-content #nom-chef {
+  font-family: poppins, sans-serif;
+  margin: 0 auto;
+}
+main .store .store-left .store-border .store-content #chef {
+  font-family: poppins, sans-serif;
+  font-size: 1.5rem;
+  color: #babbb7;
+  margin: 0 auto;
 }
 @media screen and (min-width: 900px) {
   main .store .store-img {
     background: url(./../img/store-01.jpg) center/cover;
-    min-height: 60vh;
   }
+}
+main .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #21201e;
+  color: #eeeeee;
+  padding: 50px 0 0;
+  position: relative;
+}
+main .menu h1 {
+  font-size: 4rem;
+}
+main .menu .menu-logo {
+  height: 40px;
+  margin: 35px 0;
+}
+main .menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 85vw;
+}
+@media screen and (min-width: 600px) {
+  main .menu ul {
+    width: 60vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  main .menu ul {
+    width: 60vw;
+    width: 820px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .menu ul {
+    width: 50vw;
+  }
+}
+main .menu ul li {
+  font-family: roboto, sans-serif;
+  font-size: 1.5rem;
+  margin: 15px 0 30px;
+  padding: 0 0 5px;
+  border-bottom: 1px solid #eeeeee;
+}
+main .menu .menu-carte {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 85vw;
+  padding: 20px;
+  background: #eeeeee;
+  color: #000000;
+  border-top: 5px solid #a67245;
+  z-index: 10;
+}
+@media screen and (min-width: 500px) {
+  main .menu .menu-carte {
+    width: 75vw;
+  }
+}
+@media screen and (min-width: 700px) {
+  main .menu .menu-carte {
+    width: 65vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  main .menu .menu-carte {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    min-width: 820px;
+    width: 60vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .menu .menu-carte {
+    width: 50vw;
+  }
+}
+main .menu .menu-carte div {
+  display: grid;
+  grid-template-columns: 30% 60% 10%;
+  align-items: center;
+  height: 15vh;
+  padding: 20px 0;
+  border-bottom: 1px dashed #a9a69e;
+}
+@media screen and (min-width: 1200px) {
+  main .menu .menu-carte div {
+    height: 20vh;
+  }
+}
+main .menu .menu-carte div img {
+  height: 70px;
+}
+@media screen and (min-width: 500px) {
+  main .menu .menu-carte div img {
+    height: 90px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .menu .menu-carte div img {
+    height: 100px;
+  }
+}
+main .menu .menu-carte div p {
+  font-size: 1.4rem;
+  line-height: 22px;
+  color: #595956;
+}
+@media screen and (min-width: 900px) {
+  main .menu .menu-carte div p {
+    font-size: 1.5rem;
+  }
+}
+main .menu .menu-carte div h3 {
+  font-size: 2rem;
+}
+@media screen and (min-width: 900px) {
+  main .menu .menu-carte div h3 {
+    font-size: 2.2rem;
+  }
+}
+main .menu .bg-menu {
+  position: absolute;
+  z-index: 5;
+  background: url(./../img/bg-menu-01.jpg) center/cover;
+  height: 80vh;
+  width: 100%;
+  bottom: -145px;
+}
+main .reservation {
+  display: grid;
+  justify-content: center;
+  margin: 145px 0 0;
+  padding: 100px 0;
+  background-color: #21201e;
+  color: #eeeeee;
+}
+main .reservation .time-border {
+  width: 85vw;
+  padding: 20px;
+  background: #000000;
+}
+main .reservation .time-border .time-open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000000;
+  border: 1px dashed #eeeeee;
+}
+main .reservation .online-booking {
+  width: 85vw;
+  background: #eeeeee;
+  color: #000000;
 }/*# sourceMappingURL=index.css.map */
