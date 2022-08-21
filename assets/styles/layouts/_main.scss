@@ -201,118 +201,147 @@ main {
 		background-color: $black1;
 		color: $white1;
 
-		@media screen and (min-width: 900px) {
-			grid-template-columns: 25% 65%;
-		}
+		.reserv-content {
+			display: grid;
+			width: 100%;
 
-		.time-border {
-			width: 85vw;
-			padding: 20px;
-			background: $black2;
-
-			@media screen and (min-width: 500px) {
+			@media screen and (min-width: 900px) {
+				grid-template-columns: 40% 60%;
+				width: 90vw;
+			}
+			@media screen and (min-width: 1150px) {
+				grid-template-columns: 30% 70%;
 				width: 75vw;
+				max-width: 1000px;
 			}
-			@media screen and (min-width: 700px) {
-				width: 65vw;
-			}
-			// @media screen and (min-width: 900px) {
-			// 	width: 50vw;
-			// }
 
-			.time-open {
+			.time-border {
+				width: 85vw;
+				padding: 20px;
+				background: $black2;
+
+				@media screen and (min-width: 500px) {
+					width: 75vw;
+				}
+				@media screen and (min-width: 700px) {
+					width: 65vw;
+				}
+				@media screen and (min-width: 900px) {
+					width: 100%;
+				}
+
+				.time-open {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					height: 100%;
+					background: $black2;
+					border: 1px dashed $grey4;
+					padding: 30px 0 10px;
+
+					h1 {
+						font-size: 4rem;
+						margin-bottom: -15px;
+					}
+					h2 {
+						font-size: 2rem;
+						letter-spacing: 1px;
+						margin-bottom: 30px;
+					}
+					img {
+						height: 30px;
+					}
+					h3 {
+						font-size: 1.7rem;
+						font-weight: 500;
+						margin: 40px 0 20px;
+					}
+					p {
+						font-size: 1.3rem;
+					}
+				}
+			}
+
+			.online-booking {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				background: $black2;
-				border: 1px dashed $grey4;
-				padding: 30px 0 10px;
+				width: 85vw;
+				padding: 30px 0 20px;
+				background: $white1;
+				color: $black2;
+
+				@media screen and (min-width: 500px) {
+					width: 75vw;
+				}
+				@media screen and (min-width: 700px) {
+					width: 65vw;
+				}
+				@media screen and (min-width: 900px) {
+					width: 100%;
+				}
 
 				h1 {
 					font-size: 4rem;
 					margin-bottom: -15px;
 				}
 				h2 {
-					font-size: 2rem;
+					font-size: 2.5rem;
 					letter-spacing: 1px;
-					margin-bottom: 30px;
 				}
 				img {
 					height: 30px;
+					margin: 30px;
 				}
-				h3 {
-					font-size: 1.7rem;
-					font-weight: 500;
-					margin: 40px 0 20px;
+				form {
+					display: grid;
+					grid-template-columns: 1fr;
+					justify-items: center;
+					row-gap: 10px;
+
+					@media screen and (min-width: 1150px) {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						align-items: center;
+						gap: 30px;
+						width: 80%;
+					}
+					@media screen and (min-width: 1850px) {
+						width: 60%;
+					}
+
+					select,
+					input {
+						width: 220px;
+						border: none;
+						border-bottom: 1px solid $grey1;
+						background: none;
+						padding: 10px 0;
+						margin-bottom: 10px;
+
+						@media screen and (min-width: 1150px) {
+							width: 160px;
+						}
+					}
 				}
-				p {
-					font-size: 1.3rem;
-				}
-			}
-		}
+				.submit-container {
+					input[type="submit"] {
+						width: 170px;
+						margin-top: 20px;
+						padding: 15px 30px;
+						cursor: pointer;
+						font-family: $font2;
+						background: $black1;
+						color: white;
+						letter-spacing: 3px;
+						border-radius: 50px;
+						transition: 0.3s;
 
-		.online-booking {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			width: 85vw;
-			padding: 30px 0 20px;
-			background: $white1;
-			color: $black2;
-
-			@media screen and (min-width: 500px) {
-				width: 75vw;
-			}
-			@media screen and (min-width: 700px) {
-				width: 65vw;
-			}
-			// @media screen and (min-width: 900px) {
-			// 	width: 50vw;
-			// }
-
-			h1 {
-				font-size: 4rem;
-				margin-bottom: -15px;
-			}
-			h2 {
-				font-size: 2.5rem;
-				letter-spacing: 1px;
-			}
-			img {
-				height: 30px;
-				margin: 30px;
-			}
-			form {
-				display: grid;
-				grid-template-columns: 1fr;
-				justify-items: center;
-				row-gap: 10px;
-
-				select,
-				input {
-					width: 220px;
-					border: none;
-					border-bottom: 1px solid $grey1;
-					background: none;
-					padding: 10px 0;
-					margin-bottom: 10px;
-				}
-			}
-			.submit-container {
-				input[type="submit"] {
-					width: 200px;
-					margin-top: 20px;
-					padding: 15px 35px;
-					cursor: pointer;
-					font-family: $font2;
-					background: $black1;
-					color: white;
-					letter-spacing: 3px;
-					border-radius: 50px;
-					transition: 0.3s;
-
-					&:hover {
-						transform: scale(1.05);
+						&:hover {
+							transform: scale(1.05);
+						}
 					}
 				}
 			}
@@ -320,5 +349,132 @@ main {
 	}
 	// ******************** EVENT ********************
 
+	.event {
+		display: none;
+
+		@media screen and (min-width: 1150px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: $black1;
+
+			h1 {
+				font-size: 4rem;
+				margin-bottom: -13px;
+			}
+			h2 {
+				font-size: 3.2rem;
+				letter-spacing: 2px;
+				margin-bottom: 30px;
+				color: $white1;
+			}
+			img {
+				height: 30px;
+				margin-bottom: 30px;
+			}
+
+			.event-content {
+				display: grid;
+				grid-template-columns: 60% 40%;
+				grid-template-rows: 50% 50%;
+				grid-template-areas:
+					"ev1 ev3"
+					"ev2 ev3";
+				gap: 15px;
+				width: 980px;
+				margin-bottom: 150px;
+
+				.event-1 {
+					grid-area: ev1;
+					display: flex;
+					height: 200px;
+
+					.event-1-img {
+						background: url(./../img/event-01.jpg) center/cover;
+						width: 40%;
+					}
+					.event-3-info {
+					}
+				}
+				.event-2 {
+					grid-area: ev2;
+					display: flex;
+					height: 200px;
+
+					.event-2-img {
+						background: url(./../img/event-02.jpg) center/cover;
+						width: 40%;
+					}
+					.event-3-info {
+					}
+				}
+				.event-3 {
+					grid-area: ev3;
+					display: flex;
+
+					.event-3-img {
+						background: url(./../img/event-03.jpg) center/cover;
+						height: 420px;
+						width: 420px;
+						.event-3-info {
+						}
+					}
+				}
+			}
+		}
+	}
 	// ******************** CITATION ********************
+
+	.citation {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		position: relative;
+		background: $black1;
+
+		.citation-content {
+			position: relative;
+			z-index: 10;
+			width: 85vw;
+			padding: 60px;
+			background: $white1;
+
+			@media screen and (min-width: 500px) {
+				width: 75vw;
+			}
+			@media screen and (min-width: 800px) {
+				width: 65vw;
+				max-width: 1000px;
+			}
+
+			img {
+				position: absolute;
+				height: 60px;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			p {
+				font-size: 1.6rem;
+				line-height: 2.6rem;
+			}
+			p:nth-child(3) {
+				margin: 40px 0 20px;
+				font-size: 2.3rem;
+			}
+			p:nth-child(4) {
+				color: $brown1;
+				font-size: 1.7rem;
+			}
+		}
+
+		.bg-map {
+			position: absolute;
+			background: url(./../img/gmap.jpg) center/cover;
+			z-index: 5;
+			width: 100%;
+			height: 40vh;
+			bottom: -200px;
+		}
+	}
 }
