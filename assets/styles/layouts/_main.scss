@@ -1,5 +1,5 @@
 main {
-	// ******************** STORE ********************
+	// ***************************** STORE *****************************
 
 	.store {
 		display: grid;
@@ -71,7 +71,7 @@ main {
 		}
 	}
 
-	// ******************** MENU ********************
+	// ***************************** MENU *****************************
 
 	.menu {
 		display: flex;
@@ -191,7 +191,7 @@ main {
 		}
 	}
 
-	// ******************** RESERVATION ********************
+	// ***************************** RESERVATION *****************************
 
 	.reservation {
 		display: grid;
@@ -308,9 +308,6 @@ main {
 						gap: 30px;
 						width: 80%;
 					}
-					@media screen and (min-width: 1850px) {
-						width: 60%;
-					}
 
 					select,
 					input {
@@ -347,7 +344,7 @@ main {
 			}
 		}
 	}
-	// ******************** EVENT ********************
+	// ***************************** EVENT *****************************
 
 	.event {
 		display: none;
@@ -370,60 +367,149 @@ main {
 			}
 			img {
 				height: 30px;
-				margin-bottom: 30px;
+				margin-bottom: 40px;
 			}
 
 			.event-content {
 				display: grid;
-				grid-template-columns: 60% 40%;
-				grid-template-rows: 50% 50%;
+				grid-template-columns: 59.25% 39.25%;
+				grid-template-rows: 48.1% 48.1%;
 				grid-template-areas:
 					"ev1 ev3"
 					"ev2 ev3";
 				gap: 15px;
-				width: 980px;
-				margin-bottom: 150px;
+				width: 1000px;
+				margin-bottom: 170px;
+
+				.event-date {
+					display: flex;
+					flex-direction: column;
+					text-align: center;
+					justify-content: center;
+					height: 85px;
+					width: 85px;
+					background: $black1;
+					color: $white1;
+
+					p:nth-child(1) {
+						font-family: $font3;
+						font-weight: 900;
+						font-size: 2.5rem;
+						margin-bottom: -5px;
+					}
+					p:nth-child(2) {
+						font-family: $font3;
+						font-size: 1.5rem;
+					}
+				}
+
+				.nom-event {
+					font-size: 2.7rem;
+					color: $grey5;
+				}
+				.lieu-horaire {
+					font-size: 1.4rem;
+					letter-spacing: 1px;
+					word-spacing: 3px;
+					color: $grey1;
+				}
+				.buy-ticket {
+					font-family: $font2;
+					font-size: 1.5rem;
+					letter-spacing: 2px;
+					color: $grey5;
+				}
 
 				.event-1 {
 					grid-area: ev1;
 					display: flex;
-					height: 200px;
 
 					.event-1-img {
+						display: flex;
+						align-items: center;
+						justify-content: center;
 						background: url(./../img/event-01.jpg) center/cover;
-						width: 40%;
+						aspect-ratio: 1/1;
 					}
-					.event-3-info {
+					.event-1-info {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-evenly;
+						width: 100%;
+						padding: 15px;
+						background: $white1;
 					}
 				}
 				.event-2 {
 					grid-area: ev2;
 					display: flex;
-					height: 200px;
 
 					.event-2-img {
+						display: flex;
+						align-items: center;
+						justify-content: center;
 						background: url(./../img/event-02.jpg) center/cover;
-						width: 40%;
+						aspect-ratio: 1/1;
 					}
-					.event-3-info {
+					.event-2-info {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-evenly;
+						width: 100%;
+						padding: 15px;
+						background: $white1;
 					}
 				}
 				.event-3 {
 					grid-area: ev3;
-					display: flex;
 
 					.event-3-img {
+						display: flex;
+						align-items: center;
+						justify-content: center;
 						background: url(./../img/event-03.jpg) center/cover;
-						height: 420px;
-						width: 420px;
+						width: 393px;
+						aspect-ratio: 1/1;
+
 						.event-3-info {
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							justify-content: space-between;
+							text-align: center;
+							width: 90%;
+							height: 90%;
+							padding-bottom: 40px;
+							background: $white1;
+						}
+
+						.event-3-date {
+							display: flex;
+							flex-direction: column;
+							text-align: center;
+							justify-content: center;
+							height: 85px;
+							width: 85px;
+							background: $black1;
+							color: $white1;
+
+							p:nth-child(1) {
+								font-family: $font3;
+								font-weight: 900;
+								font-size: 2.5rem;
+								margin-bottom: -5px;
+							}
+							p:nth-child(2) {
+								font-family: $font3;
+								font-size: 1.5rem;
+							}
 						}
 					}
 				}
 			}
 		}
 	}
-	// ******************** CITATION ********************
+	// ***************************** CITATION *****************************
 
 	.citation {
 		display: flex;
