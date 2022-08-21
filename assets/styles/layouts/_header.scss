@@ -54,6 +54,7 @@ header {
 				transition: 0.5s;
 				&:hover {
 					color: $brown1;
+					border-bottom: 1px solid $brown1;
 				}
 			}
 		}
@@ -117,8 +118,13 @@ header {
 	p {
 		text-align: center;
 		width: 75vw;
-		font-size: 1.5rem;
-		letter-spacing: 7px;
+		font-size: 1.3rem;
+		letter-spacing: 5px;
 		color: $white1;
+
+		@media screen and (min-width: 900px) {
+			font-size: 1.5rem;
+			letter-spacing: 7px;
+		}
 	}
 }

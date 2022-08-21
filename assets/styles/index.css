@@ -35,7 +35,7 @@ h2 {
 }
 
 h3 {
-  font-family: roboto, sans-serif;
+  font-family: poppins, sans-serif;
   color: #a67245;
 }
 
@@ -117,6 +117,7 @@ header nav .nav-menu li {
 }
 header nav .nav-menu li:hover {
   color: #a67245;
+  border-bottom: 1px solid #a67245;
 }
 header .nav-social {
   justify-content: space-evenly;
@@ -184,9 +185,15 @@ header .nav-social li:hover {
 .header-content p {
   text-align: center;
   width: 75vw;
-  font-size: 1.5rem;
-  letter-spacing: 7px;
+  font-size: 1.3rem;
+  letter-spacing: 5px;
   color: #eeeeee;
+}
+@media screen and (min-width: 900px) {
+  .header-content p {
+    font-size: 1.5rem;
+    letter-spacing: 7px;
+  }
 }
 
 main .store {
@@ -218,15 +225,15 @@ main .store .store-left .store-border .store-content {
 }
 main .store .store-left .store-border .store-content h1 {
   font-size: 4rem;
-  margin: 0 0 -20px;
+  margin: 30px 0 -20px;
 }
 main .store .store-left .store-border .store-content h2 {
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-weight: 700;
 }
 main .store .store-left .store-border .store-content .logo-store {
-  height: 40px;
-  margin: 40px 0;
+  height: 30px;
+  margin: 30px 0;
 }
 @media screen and (min-width: 600px) {
   main .store .store-left .store-border .store-content .logo-store {
@@ -235,12 +242,12 @@ main .store .store-left .store-border .store-content .logo-store {
 }
 main .store .store-left .store-border .store-content p {
   width: 85%;
-  margin: 20px auto;
-  font-size: 2rem;
+  margin: 0 auto;
+  font-size: 1.6rem;
 }
 main .store .store-left .store-border .store-content .photo-chef1 {
-  height: 100px;
-  margin: 10px 0 20px;
+  height: 70px;
+  margin: 15px 0;
 }
 main .store .store-left .store-border .store-content #nom-chef {
   font-family: poppins, sans-serif;
@@ -248,9 +255,9 @@ main .store .store-left .store-border .store-content #nom-chef {
 }
 main .store .store-left .store-border .store-content #chef {
   font-family: poppins, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #babbb7;
-  margin: 0 auto;
+  margin: -5px auto 0;
 }
 @media screen and (min-width: 900px) {
   main .store .store-img {
@@ -373,6 +380,7 @@ main .menu .menu-carte div p {
   }
 }
 main .menu .menu-carte div h3 {
+  font-family: roboto, sans-serif;
   font-size: 2rem;
 }
 @media screen and (min-width: 900px) {
@@ -396,20 +404,112 @@ main .reservation {
   background-color: #21201e;
   color: #eeeeee;
 }
+@media screen and (min-width: 900px) {
+  main .reservation {
+    grid-template-columns: 25% 65%;
+  }
+}
 main .reservation .time-border {
   width: 85vw;
   padding: 20px;
   background: #000000;
+}
+@media screen and (min-width: 500px) {
+  main .reservation .time-border {
+    width: 75vw;
+  }
+}
+@media screen and (min-width: 700px) {
+  main .reservation .time-border {
+    width: 65vw;
+  }
 }
 main .reservation .time-border .time-open {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #000000;
-  border: 1px dashed #eeeeee;
+  border: 1px dashed #757575;
+  padding: 30px 0 10px;
+}
+main .reservation .time-border .time-open h1 {
+  font-size: 4rem;
+  margin-bottom: -15px;
+}
+main .reservation .time-border .time-open h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+main .reservation .time-border .time-open img {
+  height: 30px;
+}
+main .reservation .time-border .time-open h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin: 40px 0 20px;
+}
+main .reservation .time-border .time-open p {
+  font-size: 1.3rem;
 }
 main .reservation .online-booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 85vw;
+  padding: 30px 0 20px;
   background: #eeeeee;
   color: #000000;
+}
+@media screen and (min-width: 500px) {
+  main .reservation .online-booking {
+    width: 75vw;
+  }
+}
+@media screen and (min-width: 700px) {
+  main .reservation .online-booking {
+    width: 65vw;
+  }
+}
+main .reservation .online-booking h1 {
+  font-size: 4rem;
+  margin-bottom: -15px;
+}
+main .reservation .online-booking h2 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+main .reservation .online-booking img {
+  height: 30px;
+  margin: 30px;
+}
+main .reservation .online-booking form {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  row-gap: 10px;
+}
+main .reservation .online-booking form select,
+main .reservation .online-booking form input {
+  width: 220px;
+  border: none;
+  border-bottom: 1px solid #babbb7;
+  background: none;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+main .reservation .online-booking .submit-container input[type=submit] {
+  width: 200px;
+  margin-top: 20px;
+  padding: 15px 35px;
+  cursor: pointer;
+  font-family: poppins, sans-serif;
+  background: #21201e;
+  color: white;
+  letter-spacing: 3px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+main .reservation .online-booking .submit-container input[type=submit]:hover {
+  transform: scale(1.05);
 }/*# sourceMappingURL=index.css.map */

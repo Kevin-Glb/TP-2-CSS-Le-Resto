@@ -27,15 +27,15 @@ main {
 
 					h1 {
 						font-size: 4rem;
-						margin: 0 0 -20px;
+						margin: 30px 0 -20px;
 					}
 					h2 {
-						font-size: 3rem;
+						font-size: 2.3rem;
 						font-weight: 700;
 					}
 					.logo-store {
-						height: 40px;
-						margin: 40px 0;
+						height: 30px;
+						margin: 30px 0;
 
 						@media screen and (min-width: 600px) {
 							margin: 20px 0;
@@ -43,12 +43,12 @@ main {
 					}
 					p {
 						width: 85%;
-						margin: 20px auto;
-						font-size: 2rem;
+						margin: 0 auto;
+						font-size: 1.6rem;
 					}
 					.photo-chef1 {
-						height: 100px;
-						margin: 10px 0 20px;
+						height: 70px;
+						margin: 15px 0;
 					}
 					#nom-chef {
 						font-family: $font2;
@@ -56,9 +56,9 @@ main {
 					}
 					#chef {
 						font-family: $font2;
-						font-size: 1.5rem;
+						font-size: 1.3rem;
 						color: $grey1;
-						margin: 0 auto;
+						margin: -5px auto 0;
 					}
 				}
 			}
@@ -172,6 +172,7 @@ main {
 					}
 				}
 				h3 {
+					font-family: $font3;
 					font-size: 2rem;
 					@media screen and (min-width: 900px) {
 						font-size: 2.2rem;
@@ -200,24 +201,121 @@ main {
 		background-color: $black1;
 		color: $white1;
 
+		@media screen and (min-width: 900px) {
+			grid-template-columns: 25% 65%;
+		}
+
 		.time-border {
 			width: 85vw;
 			padding: 20px;
 			background: $black2;
+
+			@media screen and (min-width: 500px) {
+				width: 75vw;
+			}
+			@media screen and (min-width: 700px) {
+				width: 65vw;
+			}
+			// @media screen and (min-width: 900px) {
+			// 	width: 50vw;
+			// }
 
 			.time-open {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				background: $black2;
-				border: 1px dashed $white1;
+				border: 1px dashed $grey4;
+				padding: 30px 0 10px;
+
+				h1 {
+					font-size: 4rem;
+					margin-bottom: -15px;
+				}
+				h2 {
+					font-size: 2rem;
+					letter-spacing: 1px;
+					margin-bottom: 30px;
+				}
+				img {
+					height: 30px;
+				}
+				h3 {
+					font-size: 1.7rem;
+					font-weight: 500;
+					margin: 40px 0 20px;
+				}
+				p {
+					font-size: 1.3rem;
+				}
 			}
 		}
 
 		.online-booking {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			width: 85vw;
+			padding: 30px 0 20px;
 			background: $white1;
 			color: $black2;
+
+			@media screen and (min-width: 500px) {
+				width: 75vw;
+			}
+			@media screen and (min-width: 700px) {
+				width: 65vw;
+			}
+			// @media screen and (min-width: 900px) {
+			// 	width: 50vw;
+			// }
+
+			h1 {
+				font-size: 4rem;
+				margin-bottom: -15px;
+			}
+			h2 {
+				font-size: 2.5rem;
+				letter-spacing: 1px;
+			}
+			img {
+				height: 30px;
+				margin: 30px;
+			}
+			form {
+				display: grid;
+				grid-template-columns: 1fr;
+				justify-items: center;
+				row-gap: 10px;
+
+				select,
+				input {
+					width: 220px;
+					border: none;
+					border-bottom: 1px solid $grey1;
+					background: none;
+					padding: 10px 0;
+					margin-bottom: 10px;
+				}
+			}
+			.submit-container {
+				input[type="submit"] {
+					width: 200px;
+					margin-top: 20px;
+					padding: 15px 35px;
+					cursor: pointer;
+					font-family: $font2;
+					background: $black1;
+					color: white;
+					letter-spacing: 3px;
+					border-radius: 50px;
+					transition: 0.3s;
+
+					&:hover {
+						transform: scale(1.05);
+					}
+				}
+			}
 		}
 	}
 	// ******************** EVENT ********************
